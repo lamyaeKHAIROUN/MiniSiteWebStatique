@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>devoir2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script TYPE="text/javascript" LANGUAGE="JavaScript">
+        function visibilite(thingId) {
+            var targetElement;
+            targetElement = document.getElementById(thingId);
+            if (targetElement.style.display == "none") {
+                targetElement.style.display = "";
+            } else {
+                targetElement.style.display = "none";
+            }
+        }
+    </script>
+
+
+
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        
+        .nav-link {
+            display: block;
+            padding: .5rem 1rem;
+            text-align: center;
+            border-radius: 0px 0px 0px 0px;
+        }
+        
+        .card {
+            background-color: rgb(11, 22, 59);
+            text-align: center;
+            font-size: 24px;
+            color: rgb(235, 235, 143);
+            margin-top: 3px;
+            padding: 5px;
+        }
+        
+        a.card {
+            color: rgb(235, 235, 143);
+        }
+        
+        ol.event>li>a {
+            color: rgb(32, 13, 85);
+        }
+        
+        .paragraph {
+            font-size: medium;
+            text-align: justify;
+        }
+        
+        ol.event {
+            list-style-type: inherit;
+            font-weight: 900;
+            font: medium;
+            font-size: large;
+            font-family: serif;
+            color: cornflowerblue;
+        }
+        
+        .img {
+            border: 2px solid rgb(11, 22, 59);
+        }
+        
+        caption {
+            caption-side: top;
+            text-align: center;
+            font-weight: 900;
+            font-size: x-large;
+            color: black;
+            text-shadow: 2px 2px rgb(54, 106, 185);
+        }
+        
+        #pic {
+            background-image: url(informclubs.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100%;
+        }
+    </style>
+</head>
+</style>
+</head>
+
+<body style="background-color: rgb(185, 215, 241);">
+
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color:rgb(165, 196, 224)">
+        <div class="col-lg-2">
+            <a class="navbard-brand" href="#"><img src="logofst.png" width="100%" height="100%"></a>
+        </div>
+        <div class="col-lg-2" style="color: rgb(11, 22, 59); text-align: center;">
+            <h5><strong>Faculté des Sciences et Techniques <br> -Tanger- </strong></h5>
+
+        </div>
+        <a class="navbar-brand" href="#" style="color: rgb(11, 22, 59);"><strong>LES CLUB DE FSTT</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" id="myMenu">
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="#1" style="background-color:rgb(11, 22, 59); color: rgb(235, 235, 143);" onmouseover="this.style.backgroundColor='rgb(165, 196, 224)';" onmouseout="this.style.backgroundColor='rgb(11, 22, 59)';"><strong>GREENOLOGY</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#2" style="background-color:rgb(11, 22, 59);color: rgb(235, 235, 143);" onmouseover="this.style.backgroundColor='rgb(165, 196, 224';" onmouseout="this.style.backgroundColor='rgb(11, 22, 59)';"><strong>CADAC</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#3" style="background-color:rgb(11, 22, 59);color: rgb(235, 235, 143);" onmouseover="this.style.backgroundColor='rgb(165, 196, 224';" onmouseout="this.style.backgroundColor='rgb(11, 22, 59)';"><strong>ENACTUS</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#4" style="background-color:rgb(11, 22, 59);color: rgb(235, 235, 143);" onmouseover="this.style.backgroundColor='rgb(165, 196, 224';" onmouseout="this.style.backgroundColor='rgb(11, 22, 59)';"><strong>ASTRONOMIE</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#5" style="background-color:rgb(11, 22, 59);color: rgb(235, 235, 143);" onmouseover="this.style.backgroundColor='rgb(165, 196, 224';" onmouseout="this.style.backgroundColor='rgb(11, 22, 59)';"> <strong>القرآن</strong></a>
+                </li>
+
+            </ul>
+            <form id="navbarResponsive" action="search" method="get" class="form-inline">
+                <div class="input-group">
+                    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Rechercher..." title="Type in a category">
+
+
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-info"><span class="fa fa-search"></span></button>
+                    </div>
+                    <script>
+                        function myFunction() {
+                            var input, filter, ul, li, a, i;
+                            input = document.getElementById("mySearch");
+                            filter = input.value.toUpperCase();
+                            ul = document.getElementById("myMenu");
+                            li = ul.getElementsByTagName("li");
+                            for (i = 0; i < li.length; i++) {
+                                a = li[i].getElementsByTagName("a")[0];
+                                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                    li[i].style.display = "";
+                                } else {
+                                    li[i].style.display = "none";
+                                }
+                            }
+                        }
+                    </script>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+
+
+
+
+    <!--<form class="form-inline" class="col-sm-2" action="/action_page.php">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Chercher sur le site">
+                    <button class="btn btn-success" id="navbarResponsive" type="submit"><img src="img/search.png"></button>
+                </form>barre defilement images-->
+
+
+
+
+
+
+
+
+
+
+
+    <div id="demo" class="carousel slide" data-ride="carousel" class="col-sm-12">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/font1.jpg" width="100%" height="450px">
+            </div>
+            <div class="carousel-item">
+                <img src="img/font2.jpg" width="100%" height="450px">
+            </div>
+            <div class="carousel-item">
+                <img src="img/font4.jpg" width="100%" height="450px">
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/green.jpg" width="100%" height="450px">
+            </div>
+            <div class="carousel-item">
+                <img src="img/cadac.jpg" width="100%" height="450x">
+            </div>
+            <div class="carousel-item">
+                <img src="img/astro.jpg" width="100%" height="450px">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+
+
+
+
+
+    <div class="container" style="margin-top:30px">
+        <div class="row">
+            <!---LES CLUBS (VOLET 3)--->
+
+            <div class="col-sm-4">
+
+
+                <div id="1">
+                    <img class="img" src="img/1.PNG" width="100%" height="100%" class="img-thumbnail">
+                    <div class="card">
+                        <a class="card" href="javascript:visibilite('club1');">Greenology</br></a>
+                    </div>
+                    <div id="club1" style="display:none">
+                        <div class="paragraph"> Le Club de l’environnement de la FST de Tanger, Dénommé Greenology Club, est nouvellement créé et il a comme vocation de : - Transmettre aux étudiants, une conscience nationale éclairée, un patriotisme activé pour un environnement
+                            préservé. - Sensibiliser et rendre les étudiants de la FST de Tanger des combattants contre l’éparpillement de l’environnement. - Tous unis, bien convaincus que nos richesses environnementales très précieuses sont menacées,
+                            et qu’avec une conscience large du désastre écologique qui frappe à la porte de notre pays, on pourra gagner la bataille et sauver ce qu’il reste encore à sauver.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a class="card" href="javascript:visibilite('Eclub1');">EVENEMENTS </br></a>
+                    </div>
+                    <div id="Eclub1" style="display:none">
+                        <ol class="event">
+                            <li><a href="javascript:visibilite('club11');">APPEL AU RECRUTEMENT : COME JOIN THE GREEN TEAM À FSTT </br></a></li>
+                            <li><a href="javascript:visibilite('club12');">HydroDay</br></a></li>
+                            <li><a href="javascript:visibilite('club13');">Appel au recrutement</br></a></li>
+                            <li><a href="javascript:visibilite('club14');">Green & Clean</br></a></li>
+                            <li><a href="javascript:visibilite('club15');">Conférence : "BIOGAZ : une opportunité pour le développement durable"</br></a></li>
+                        </ol>
+                    </div>
+                    <hr class="light">
+                </div>
+
+
+                <div id="2">
+                    <img class="img" src="img/2.PNG" width="100%" height="100%" class="img-thumbnail">
+                    <div class="card">
+                        <a class="card" href="javascript:visibilite('club2');" style="background-color:rgb(11, 22, 59); padding: 5px;">CADAC</br></a>
+                    </div>
+                    <div id="club2" style="display:none">
+                        <div class="paragraph"> Un Club de théâtre Multidisciplinaire fondée en 2011 par un groupe des étudiants provenant d’horizons géographiques et disciplines Divers. C'est un club d'art dramatique et d’animation culturelle, un club ou on a recours à la création
+                            et l'animation des pièces théâtrales, des sketchs, des chorégraphies et d'autre ... !
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <a class="card" href="javascript:visibilite('Eclub2');">EVENEMENTS </br></a>
+                    </div>
+                    <div id="Eclub2" style="display:none">
+                        <ol class="event">
+                            <li><a href="javascript:visibilite('club21');">CADAC عاد من جديد</br></a></li>
+                            <li><a href="javascript:visibilite('club22');">Spectacle 'CC' Troupe Partage FSTT à FITUT 13</br></a></li>
+                            <li><a href="javascript:visibilite('club23');">Atelier et Restitution</br></a></li>
+                            <li><a href="javascript:visibilite('club24');">Spectacle ''c.c''</br></a></li>
+                            <li><a href="javascript:visibilite('club25');">Spectacle cc</br></a></li>
+                        </ol>
+                    </div>
+                    <hr class="light">
+                </div>
+                <div id="3">
+                    <img class="img" src="img/3.PNG" width="100%" height="100%" class="img-thumbnail">
+                    <div class="card">
+                        <a class="card" href="javascript:visibilite('club3');">ENACTUS</br></a>
+                    </div>
+                    <div id="club3" style="display:none">
+                        <div class="paragraph"> L’équipe ENACTUS de la Faculté des Sciences et Techniques de Tanger, est crée en novembre 2011,et est constituée des doctorants, des élèves ingénieurs, des étudiants en master et des licenciés. Elle appartient à l’ONG mondiale
+                            Enactus, une organisation à but non lucratif, implantée dans plus de 48 pays tel que le Maroc , ayant pour objectif de promouvoir le partenariat entre les entreprises, les universités , les grandes écoles et la société civile.
+                            La finalité du programme Enactus consiste à améliorer la qualité et le niveau de vie d’un grand nombre d’individus dans le monde entier à travers l’enseignement des principes de l’économie de marché, de l’entreprenariat, de
+                            la réussite financière et de l’éthique dans le domaine des affaires.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a class="card" href="javascript:visibilite('Eclub3');">EVENEMENTS</br></a>
+                    </div>
+                    <div id="Eclub3" style="display:none">
+                        <ol class="event">
+                            <li><a href="javascript:visibilite('club31');">The opening ceremony : Students As Entrepreneurs</br></a></li>
+                            <li><a href="javascript:visibilite('club32');">Ashow 4éme Edition</br></a></li>
+                            <li><a href="javascript:visibilite('club33');">Recrutement 2019 Enactus FST Tanger</br></a></li>
+                            <li><a href="javascript:visibilite('club34');">The A-Movie</br></a></li>
+                            <li><a href="javascript:visibilite('club35');">Moroccan SDG'S Caravan à Tanger</br></a></li>
+                        </ol>
+                    </div>
+                    <hr class="light">
+                </div>
+
+                <div id="4">
+                    <img class="img" src="img/4.PNG" width="100%" height="100%" class="img-thumbnail" style="background: white;">
+                    <div class="card">
+                        <a class="card" href="javascript:visibilite('club4');">ASTRONOMIE</br></a>
+                    </div>
+                    <div id="club4" style="display:none">
+                        <div class="paragraph">Le Club d'Astronomie de Tanger a pour objectif de réunir les amateurs de cette science en organisant des activités scientifiques, culturelles, </br>....bravo à tous les étudiants qui ont participé à la réussite de ce Club sur l'echelle
+                            de la FSTT.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a class="card" href="javascript:visibilite('Eclub4');">EVENEMENTS</br></a>
+                    </div>
+                    <div id="Eclub4" style="display:none">
+                        <ol class="event">
+                            <li><a href="javascript:visibilite('club41');">Modernity of IBN AL-HAYTHAM</br></a></li>
+                            <li><a href="javascript:visibilite('club42');">La Vie Sur Mars</br></a></li>
+                            <li><a href="javascript:visibilite('club43');">A Journey From Earth To The Last Planet</br></a></li>
+                            <li><a href="javascript:visibilite('club44');">Présentation : Supernova "l'explosion de la supergéante"</br></a></li>
+                            <li><a href="javascript:visibilite('club45');">Présentation sur les TROUS NOIRS "A story of a singularity"</br></a></li>
+                        </ol>
+                    </div>
+                    <hr class="light">
+                </div>
+
+                <div id="5">
+                    <img class="img" src="img/5.PNG" width="100%" height="100%" class="img-thumbnail">
+                    <div class="card">
+                        <a class="card" href="javascript:visibilite('club5');">نادي القرآن الكريم</br></a>
+                    </div>
+                    <div id="club5" style="display:none">
+                        <div class="paragraph"> يشكل نادي اقرأ للقرآن الكريم فضاء علميا معرفيا تربويا للعمل الطلابي من داخل كلية العلوم والتقنيات بجامعة عبد المالك السعدي بمدينة طنجة، أُفرز ميلاده في أكتوبر 2010 وهو نادي شبابي طلابي مغربي مستقل عن أي انتماء حزبي أو سياسي و كذا
+                            بعيد ومستقل عن مختلف فصائل الحركة الإسلامية، ولا يُروج لأفكار جهة معينة أو جماعة محددة، بل يدعوا إلى الإسلام الوسط، "وكذلك جعلناكم أمة وسطا" البقرة الآية 143 . تقوم رؤية النادي على السعي إلى المساهمة في التجديد الشامل للعمل
+                            الطلابي الإسلامي بالجامعة، والحث على قيم طلب العلم والاجتهاد في تحصيله، وتمتين ارتباطه برسالة الدعوة إلى الله تعالى بالحكمة والموعظة الحسنة، وتأكيد مرجعية الإسلام، ودعم جهود ترشيد الصحوة الطلابية الإسلامية، وتأكيد قيم الحوار
+                            والاختلاف والوسطية والمواطنة، ونبذ العنف والغلو والتطرف، ودعم جهود التنمية والنهضة بالمغرب.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a class="card" href="javascript:visibilite('Eclub5');">EVENEMENTS</br></a>
+                    </div>
+                    <div id="Eclub5" style="display:none">
+                        <ol class="event">
+                            <li><a href="javascript:visibilite('club51');">محاضرة بعنوان :  الشباب بين الهزيمة والنجاح</br></a></li>
+                            <li><a href="javascript:visibilite('club52');">أسبوع تعريفي</br></a></li>
+                            <li><a href="javascript:visibilite('club53');">محاضرة:  إِنَّهُمْ فِتْيَةٌ آمَنُوا بِرَبِّهِمْ </br></a></li>
+                            <li><a href="javascript:visibilite('club54');">محاضرة بعنوان : الشباب والاعتزاز بالهوية</br></a></li>
+                            <li><a href="javascript:visibilite('club55');">دورَةً ثقافية في حِفظِ الأحاديث النبوية</br></a></li>
+                        </ol>
+                    </div>
+                    <hr class="light">
+                </div>
+
+                <hr class="d-sm-none">
+
+            </div>
+
+            <div id="pic" class="col-sm-8" style="width: 100% ;">
+
+                <!----------------------------------------------- activite1 club1------------------------------------------------------>
+                <div id="club11" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB GREENOLOGY:
+                    </h3>
+                    <div class="fakeimg" class="container"><img src="img/c1.PNG" width="100%" height="200"></div>
+
+                    <table class="table table-striped">
+                        <caption>PLANING</caption>
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p11');">APPEL AU RECRETEMENT</a></td>
+                                <td>decembre,2019</td>
+                                <td>18</td>
+                                <td>10 AM – 1 PM</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <div class="paragraph" id="p11" style="display: none">
+                        Details:<br>Stand de recrutement du Club Greenology, en Compagnie et en Collaboration avec L'ASSOCIATION MAROCAINE POUR UN ENVIRONNEMENT DURABLE qui sera aussi présente pour un recrutement à son tour . Ce Stand sera riche en informations
+                        ; une opportunité à ne pas rater pour vous expliquer le but et le fonctionnement de ces deux Organismes . Vous sauriez tout , vous n'avez qu'a venir et nous répondrons à toutes vos questions . <br>
+                        <hr class="light">
+                        <br>
+                    </div>
+
+                </div>
+
+                <!-------------------------------------- activite2 club1-------------------------------->
+                <div id="club12" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB GREENOLOGY:
+                    </h3>
+                    <div class="fakeimg">
+                        <img src="img/c2.PNG" width="100%" height=" 200 ">
+                    </div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p12');">HydroDay</a></td>
+                                <td>Mars,2017</td>
+                                <td>22</td>
+                                <td>9:30 AM – 5 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p12" style="display: none ">Details:<br>A l’occasion de la journée mondiale de l’eau dont le thème cette année porte sur « les eaux usées » ; Le club « GREENOLOGY CLUB » de la FST de Tanger, qui a comme objectif la sensibilisation du publique sur les problématiques
+                        de l’environnement ; Organise le Mercredi 22 Mars 2017 a la FST de Tanger la Première édition de « L’HydroDay ». Au programme, une conférence où plusieurs intervenants et spécialistes prendront part. Pauses café, plusieurs Ateliers
+                        et stands des différents clubs de la FST de Tanger vous attendent. Le programme complet sera affiché ultérieurement. Pour confirmer votre participation à « L’HydroDay » veuillez remplir le formulaire ci-dessous :
+                        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSd9mh3ZGBo6-rM2fnGnelNI3ndG4JoAraYpsW1BKbMjr_XGsg%2Fviewform%3Fc%3D0%26w%3D1%26fbclid%3DIwAR0V-z_pcwagO1YrybRdFpdtxVpLmLkV2GD0HfjEH7gFyrEcQnlkuGJXj6c&h=AT1tdZoPZ8Jf6w0w0DjB2Yg0AvITQkmEKYne5O79yNcKmhZpCasTYOuL3Y7e976P52rBVavMk-kKuuGMZ-fGFqjvZZwRszoX2tG7l4O5r6ZtZlgu1YJAPlo73Zau5DpK-oIn "><br> facebook</a>
+                        <br>
+                        <hr class="light"><br>
+                    </div>
+
+
+                </div>
+
+                <!-------------------activite3 du club1-------------------------------------------------->
+                <div id="club13" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB GREENOLOGY:
+
+                    </h3>
+                    <div class="fakeimg "> <img src="img/c3.PNG " width="100%" height="200"></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p13');">Appel au recrutement1</a></td>
+
+                                <td>decembre,2019</td>
+                                <td>03</td>
+                                <td>3PM – 5 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <p id="p13" style="display: none ">Details:<br> inscription en ligne :
+                        <a href="https://goo.gl/BBEIl6 ">https://goo.gl/BBEIl6 </a>
+                        <br>
+                        <hr class="light"> <br>
+                    </p>
+
+                </div>
+
+
+                <!---------------------------activite4 du club1------------------------------------------->
+                <div id="club14" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB GREENOLOGY:
+
+                    </h3>
+                    <div class="fakeimg "> <img src="img/c4.PNG " width="100%" height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p14');">Green & Clean</a></td>
+
+                                <td>novembre,2019</td>
+                                <td>20</td>
+                                <td>1PM – 4 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p14" style="display: none ">Details:<br> Dans le cadre des activités para universitaires, les membres du club d’environnement ‘Greenology club’, Enactus FST et Enactus ensat conçoivent en collaboration la réalisation du tri de déchets au sein du campus. L’idée
+                        de la réalisation du tri n’est autre qu’un moyen de sensibiliser nos étudiants, voire la génération à venir, de l’importance qu’on en doit à l’environnement et essayer de développer et d’améliorer à notre échelle l’esprit écologique
+                        de toute personne. Journée sous thème : Rôle de la faculté des sciences et techniques de Tanger dans la promotion du développement durable, gouvernance environnementale vers où ? L’événement GREEN & CLEAN de sa première édition
+                        sera partagée entre conférences le matin et ateliers éco-artistiques à l'après midi !
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!---------------------activite5 du club1------------------------------------------------------>
+                <div id="club15" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB GREENOLOGY:
+
+                    </h3>
+                    <div class="fakeimg"> <img src="img/c5.PNG" width="100%" height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p15');">Conférence : "BIOGAZ : une opportunité pour le développement durable "</a></td>
+
+                                <td>octobre,2019</td>
+                                <td>16</td>
+                                <td>4PM – 6 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p15" style="display: none ">Details:<br> Greenology vous donne chance d'explorer le monde du biogaz et ses applications avantageuses pour un développement durable. Présentée par le docteur Chafik Tarik, soyez présents et nombreux, le mardi 24 mars, 12h30 à l'amphi
+                        2 pour une conférence riche en nouvelles connaissances !
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+
+
+                <!--***************************************************************************************************************-->
+                <!----------------------------------------------- activite1 club2------------------------------------------------------>
+                <div id="club21" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB CADAC:
+
+                    </h3>
+
+                    <div class="fakeimg"> <img src="img/d1.PNG" width="100%" height="200"></div>
+
+
+                    <table class="table table-striped">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p21');">CADAC عاد من جديد </a></td>
+
+                                <td>novembre,2019</td>
+                                <td>27</td>
+                                <td> at 10 AM </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p21" style="display: none">Details:<br>Cadac est de retour, Ah, c'est quoi CADAC??? CADAC est l'abréviation du club d'art dramatique et animations culturelles. Nous partageons deux fois par semaine un temps et des moment réservés que pour l'amour commun du l'art
+                        et du théâtre. Si vous êtes intéressés de vivre ces moments avec nous. Nous vous informons que les séances de Cadac vont commencer le mercredi 27 novembre à 18h dans la salle B01 le stand sera à votre disposition au carré rouge
+                        dès le Lundi ( 25 nov ) matin. Sinon veuillez envoyer vos coordonnées à la boite des messages de la page en confirmant votre présence. NB: *les coordonnées sont: Nom, prénom, Num de téléphone, niveau universitaire et établissement.
+                        **Pour plus d'infos contacter le numéro sur l'affiche de l'événement.
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+
+                </div>
+                <!-------------------------------------------------------------------------------------------------------------->
+                <!-------------------------------------- activite2 club2-------------------------------->
+                <div id="club22" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB CADAC:
+
+                    </h3>
+                    <div class="fakeimg">
+                        <img src="img/d2.PNG" width="100%" height="200">
+                    </div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p22');">Spectacle 'CC' Troupe Partage FSTT à FITUT 13</a></td>
+
+                                <td>Octobre,2019</td>
+                                <td>23</td>
+                                <td>9 PM – 10 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p22" style="display: none ">Details:<br>Dans le cadre de 13ème édition du Festival International de Théâtre Universitaire de Tanger, PARTAGE vous invite à assister à son spectacle ''C.C'' qui aura lieu le mercredi 23 Octobre 2019, à la salle Severo Ochoa, Tanger
+                        à 21h00. VENEZ NOMBREUX N.B: L'entrée libre :)
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+
+
+                </div>
+                <!-------------------activite3 du club2-------------------------------------------------->
+                <div id="club23" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB CADAC:
+                    </h3>
+                    <div class="fakeimg "> <img src="img/d3.PNG " width="100%" height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p23');">Atelier et Restitution</a></td>
+
+                                <td>mai,2019</td>
+                                <td>11</td>
+                                <td>at 3:30 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p23" style="display: none ">Details:<br> L'association "Partage"et La Troupe "le spectacle possible" en collaboration avec CADAC organisent à l'occasion de la journée nationale du théâtre, le premier atelier de la performance de la "Halka" durant le 11, 12, 13
+                        et 14 Mai 2019 à la Faculté des Sciences et Techniques de Tanger. (Un mariage des techniques traditionnels, du digital et des interactions de multiples arts).
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!---------------------------activite4 du club2------------------------------------------->
+                <div id="club24" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB CADAC:
+
+                    </h3>
+                    <div class="fakeimg "> <img src="img/d4.PNG " width="100%" height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p24');"> Spectacle ''c.c''</a></td>
+
+                                <td>mai,2019</td>
+                                <td>8</td>
+                                <td>9:45 PM – 12:45 AM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p24" style="display: none ">Details:<br> En partenariat avec DABATEATR, Dans le cadre de son projet culturel artistique "HUMAINOLOGIE" et en collaboration avec CADAC, PARTAGE vous invite à assister à son spectacle ''C.C'' (Restitution d'un Cycle Continue de formation)
+                        qui aura lieu le mercredi 8 Mai 2019, à la salle Mohamed Choukri, technopark, Tanger à 21h45. فابور ... VENEZ NOMBREUX
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!---------------------activite5 du club2------------------------------------------------------>
+                <div id="club25" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB CADAC:
+
+                    </h3>
+                    <div class="fakeimg "> <img src="img/d5.PNG " width="100%" height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p25');"> Spectacle cc</a></td>
+
+                                <td>avril,2019</td>
+                                <td>18</td>
+                                <td>5:30 PM – 7 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p25" style="display: none ">Details:<br>تنظم جمعية " P-ART-AGE" بشراكة مع نادي "CADAC" عرض مصغر تحت عنوان : " CC" بالموازات مع اجي نقراو. هدا العمل نتيجة بحت يهم المسرح المعاصر ، و ذلك يوم الخميس 18 ابريل 2019 على الساعة 17h30 مساء بقاعة المطالعة لكلية العلوم
+                        و التقنيات بطنجة. الدخول بالمجان مع احضار كتاب قصد تبرع به لمكتبتنا. ------------------------------------------------------------------------- Nta nti; Baghi tfarej, tba3ad alla l jaw d l9RAYA w trtah chwiya , tba3ad 3la stress
+                        w t3ish wa9i3 fchkal men west Fstt. "TNSA FSTT MEN WEST FSTT"; ma3lik ghi tji nhar 18 avril M3A 17h00 l BIBLIOTHEQUE FSTT. Mrhba bikom, Soyez Au RDV ! .
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+
+
+                <!--***************************************club3***************************************************-->
+                <div id="club31" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB ENACTUS:
+
+                    </h3>
+
+                    <div class="fakeimg"> <img src="img/e.PNG" width="100%" height="200"></div>
+
+
+                    <table class="table table-striped">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p31');">The opening ceremony :</a></td>
+
+                                <td>ceptembre,2019</td>
+                                <td>28</td>
+                                <td> 10 AM – 5:30 PM </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p31" style="display: none">Details:<br>THE WAIT IS FINALLY OVER 🔥⌛ !!! ENACTUS FSTT is about embracing your entrepreneurial skills and social conscience . With a diverse team of individuals and an even diverse set of opportunities waiting to unfold , we call
+                        out the CHANGE-MAKER in you for our recruitement. Register yourselves to be apart of the ATEAM to impact lives and have a wonderful EXPERIENCE💯💛 ! Link for application : <br>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5MTUeVChkmyT5CLqzUFgx3E5XADZOSPRmo6Op74s9na72QA/viewform?usp=pp_url ">lien facebook</a>
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!-------------------------------------------------------------------------------------------------------------->
+                <!-------------------------------------- activite2 club3-------------------------------->
+                <div id="club32" style="display:none">
+                    <h3>
+                        ACTIVITES ENACTUS:
+
+                    </h3>
+                    <div class="fakeimg">
+                        <img src="img/e2.PNG" width="100%" height=" 200 ">
+                    </div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p32');">Ashow 4éme Edition</a></td>
+
+                                <td>avril,2019</td>
+                                <td>28</td>
+                                <td> 4 PM – 8 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div id="p32" style="display: none ">Details:<br>Après le succès honorable de sa troisième édition, le ASHOW voit plus grand cette année et revient en force et toujours avec la même ambiance pour une quatrième édition; organisée par l'équipe ENACTUS Fst Tanger et dédiée
+                        à toute personne ayant un talent dans l'humour, la musique, la danse ou autre et prête à le montrer au monde. Et ce n'est pas tout ! Vous êtes fans du karaoke 🎤 ? vous avez envie de voir à quoi ça ressemble l'expérience karaoke
+                        devant un public et des jury ? Faites le choix alors et venez passer une soirée de ouf avec nous et encouragez également ceux autour de vous à venir créer des souvenirs inoubliables et contribuer à un moment musical exceptionnel
+                        par excellence! Nous vous donnerons rendez-vous donc le 28 avril 2019 à TABADOUL Pour plus d'infos contacter nous sur le : 0690039161 / 0658151917
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+
+                </div>
+                <!-------------------activite3 du club3-------------------------------------------------->
+                <div id="club33" style="display:none">
+                    <h3>
+                        ACTIVITES DU ENACTUS:
+                    </h3>
+                    <div class="fakeimg "> <img src="img/e3.PNG " width="100%" height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p33');">Recrutement 2019 Enactus FST Tanger</a></td>
+
+                                <td>fivrier,2019</td>
+                                <td>11</td>
+                                <td>at 2 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p33" style="display: none ">Details:<br> ENACTUS fstt ré-ouvre ses portes de recrutement aux étudiants passionnés par l'entrepreneuriat social , qui sont prêts à s'engager , à changer le monde et surtout à vivre une nouvelle expérience.
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!---------------------------activite4 du club3------------------------------------------->
+                <div id="club34" style="display:none">
+                    <h3>
+                        ACTIVITES DU ENACTUS:
+
+                    </h3>
+                    <div class="fakeimg "> <img src="img/e4.PNG " width="100%" height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p34');">The A-Movie</a></td>
+
+                                <td>decembre,2019</td>
+                                <td>7</td>
+                                <td>at 5 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p34" style="display: none ">Details:<br> Enactus Fst tanger takes pleasure to inform you that an incredible event is coming this friday ,December 7th, in the name of "The A-Movie" The movie's name is PREDESTINATION , It's about a temporal agent (Ethan Hawke)
+                        embarks on a final time-traveling assignment to prevent an elusive criminal from launching an attack that kills thousands of people. The event is organized in "Amphi 6" at 4:00 PM. A beautiful SURPRISE!!!! will be waiting for you
+                        after the show . HURRY & COME visit us at the "red square" "carré rouge" in Fst tanger and GET YOUR TICKETS . We are available from Monday to Tuesday from 9:00 AM until 5:00 PM .
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!---------------------activite5 du club3------------------------------------------------------>
+                <div id="club35" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB ENACTUS:
+
+                    </h3>
+                    <div class="fakeimg "><img src="img/e5.PNG " width="100%" height="200 "></div>
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p35');">Moroccan SDG'S Caravan à Tanger</a></td>
+
+                                <td>octobre,2019</td>
+                                <td>13</td>
+                                <td> 1 PM – 6 PM</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="paragraph" id="p35" style="display: none ">Details:<br>Moroccan SDGs Caravan (MSC) est une série d’ateliers dans les 12 régions du Maroc, animés en collaboration et partenariat avec des organismes, associations et jeunes locaux. MSC entre dans le cadre du plan national de travail
+                        qu’a élaboré la coalition* pendant YLP4 et dont le but est de sensibiliser et former des jeunes à propos des ODD pendant l’année 2018. *La coalition: six organismes Marocains ( Loesje Morocco, NoBox Lab, Aiesec Morocco, Fondation
+                        HEM, JCI Rabat et AIDECA) dont un membre représentant de chaque entité a bénéficié de Youth Leadership Programme YLP 4 à Amman - Jordanie en Mai 2018. Ce programme est initié par le PNUD dans les pays arabes.
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+                </div>
+                <!----*************************************club4*********************************************************-->
+                <div id="club41" style="display:none">
+                    <h3>
+                        ACTIVITES DU Club d'astronomie FSTT:
+
+                    </h3>
+
+                    <div class="fakeimg"> <img src="img/f11.PNG" width="730" height="200"></div>
+
+
+                    <table class="table table-striped">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p41');">Modernity of IBN AL-HAYTHAM</a></td>
+
+
+                                <td>mai,2019</td>
+                                <td>8</td>
+                                <td> at 3 PM </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p41" style="display: none">Details:<br>Une très belle discussion avec le professeur Jean PESTIEAU riche d'informations sur le thème de la prochaine conférence à la FSTT "Modernity of Ibn Al-Haytham". "Selon moi l'européen ,l'héritage le plus grand de la civilisation
+                        arabe du 11 ème siècle s'était de venir avec la méthode sur laquelle toute la science s'est développée depuis lors, dit Jean PESTIEAU" </p>
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!-------------------------------------------------------------------------------------------------------------->
+                <!-------------------------------------- activite2 club4-------------------------------->
+                <div id="club42" style="display:none">
+                    <h3>
+                        ACTIVITES DU Club d'astronomie FSTT:
+
+                    </h3>
+                    <div class="fakeimg">
+                        <img src="img/f22.PNG" width="730" height=" 200 ">
+                    </div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p42');">La Vie Sur Mars</a></td>
+
+                                <td>decembre,2019</td>
+                                <td>7</td>
+                                <td> 5:30 PM – 8:30 PM</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p42" style="display: none ">Details:<br> À des milliers d'années lumières de la Terre une étoile supermassive est sur le point de s'auto-détruire.Chaque jour des étoiles s'explosent partout dans l'univers mais celle-ci est différente . Il s'agit de la Supernova
+                        ,l'un des événements les plus impressionnants et spectaculaires qui marquent la mort d'une étoile. Un phénomène extrêmement puissant qu'il est presque impossible de l'imaginer.Tout cela nous penche à se demander : Qu'est-ce que
+                        vraiment cette supernova? Est-elle dangereuse?Quelle est sa puissance? À toute ces questions et à bien d'autres ,rendez-vous le Jeudi 30 Novembre (salle) pour découvrir des réponses claires mais surtout étonnantes !!
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+
+                </div>
+
+
+                <!-------------------activite3 du club4-------------------------------------------------->
+                <div id="club43" style="display:none">
+                    <h3>
+                        ACTIVITES DU Club d'astronomie FSTT:
+                    </h3>
+                    <div class="fakeimg "> <img src="img/f33.PNG " width="730 " height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p43');">A Journey From Earth To The Last Planet</a></td>
+
+                                <td>decembre,2019</td>
+                                <td>6</td>
+                                <td>5:30 PM – 8 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p43" style="display: none ">Details:<br> Club d'astronomie est de retour avec une projection d'un film Documentaire sur "Mission Pluto" . il y a 10 ans est demi ,la sonde "New Horizons" est lancé pour une mission vers pluton pour but d'explorer la dernière planète
+                        sur notre système solaire ...plusieurs mystérieuses tâches à dévoiler sur cette mystère planète naine. soyez au rendez-vous le Mercredi 06 décembre à la bibliothèque de la FSTT à 17h30 pour vivre de prêt cette fabuleuse mission.
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!---------------------------activite4 du club4------------------------------------------->
+                <div id="club44" style="display:none">
+                    <h3>
+                        ACTIVITES DU Club d'astronomie FSTT:
+
+                    </h3>
+                    <div class="fakeimg "> <img src="img/f44.PNG " width="730 " height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p44');">Présentation : Supernova "l'explosion de la supergéante"</a></td>
+
+                                <td>novembre,2019</td>
+                                <td>30</td>
+                                <td>at 7 AM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p44" style="display:none ">Details:<br> À des milliers d'années lumières de la Terre une étoile supermassive est sur le point de s'auto-détruire.Chaque jour des étoiles s'explosent partout dans l'univers mais celle-ci est différente . Il s'agit de la Supernova
+                        ,l'un des événements les plus impressionnants et spectaculaires qui marquent la mort d'une étoile. Un phénomène extrêmement puissant qu'il est presque impossible de l'imaginer.Tout cela nous penche à se demander : Qu'est-ce que
+                        vraiment cette supernova? Est-elle dangereuse?Quelle est sa puissance? À toute ces questions et à bien d'autres ,rendez-vous le Jeudi 30 Novembre (salle) pour découvrir des réponses claires mais surtout étonnantes !!
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!---------------------activite5 du club4------------------------------------------------------>
+                <div id="club45" style="display:none">
+                    <h3>
+                        ACTIVITES DU Club d'astronomie FSTT:
+
+                    </h3>
+                    <div class="fakeimg "> <img src="img/f55.PNG " width="730 " height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p45');"> Présentation sur les TROUS NOIRS "A story of a singularity"</a></td>
+
+                                <td>novembre,2019</td>
+                                <td>28</td>
+                                <td> 5:30 PM – 8:30 PM</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="paragraph" id="p45" style="display:none ">Details:<br>Quelque part dans l’espace près de nous une étoile agonise et explose en supernova, son sillage nous révèle la présence du phénomène le plus étrange du cosmos : un trou noir . Un tel sujet, nous pousse à nous demander si
+                        les trous noirs existent vraiment? OUI! Comment se forment ? Et comment en localiser un avec certitude? Rendez-vous le mardi 28 novembre à 17h30 salle E18 .. Vous saurez tout sur l'intimité de ces astres bizarres que sont les trous
+                        noirs!
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!--***************************************************************************************************************club5*************************************************************************************************************-->
+                <div id="club51" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB: نادي اقرأ للقرآن الكريم
+
+                    </h3>
+
+                    <div class="fakeimg"> <img src="img/j1.PNG" width="100%" height="200"></div>
+
+
+                    <table class="table table-striped">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p51');">محاضرة بعنوان : " الشباب بين الهزيمة والنجاح "</a></td>
+
+                                <td>novembre,2019</td>
+                                <td>23</td>
+                                <td> 2:30 PM – 4:30 PM </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p51" style="display:none">Details:<br> بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ تتقدم عربات الزمن وتدور دواليب الأحداث فتتأرجح مقصورة الحياة بين صعود ونزول خاطة دالة جيبية من التقدم والتقهقر وبين الصعود والنزول وبين التأخر والتقدم تتعاقب أجيال من الشباب. " هي
+                        الأمور كما شاهدتها دول *** من سره زمن ساءته أزمان " فتنقسم الساحة عند التأخر بين منهزم لايرى فرصة للتقدم وبين محاول يسعى إلى توفير أسباب النجاح, فالشباب اليوم بين الهزيمة والنجاح ... حول هذا الموضع يرحب بكم إخوانكم في نادي إقرأ
+                        في محاضرة ماتعة نافعة تسلط الضوء من قريب على موضوع " الشباب بين الهزيمة والنجاح " التي سيلقيها الشيخ ياسين العمري بمشاركة القارئ إبراهيم الهبطي يوم السبت 23 نونبرعلى الساعة 14:30 زوالا بالمدرج الخامس بكلية العلوم والتقنيات طنجة
+                        . كما لَا تَنْسَوْا إخواننا الكرام دَعْوَةَ أَصْدِقَائِكُمْ وَأَحْبَابكُمْ وَشَارِكُوا الخَيْرَ مَعَ مَنْ تُحِبُّونَ, قَالَ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ (مَنْ دَلَّ عَلَى خَيْرٍ, فَلَهُ أَجْر فَأَعِله), رَوْاهُ مُسْلِم
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!-------------------------------------------------------------------------------------------------------------->
+                <!-------------------------------------- activite2 club5-------------------------------->
+                <div id="club52" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB: نادي اقرأ للقرآن الكريم
+
+
+                    </h3>
+                    <div class="fakeimg">
+                        <img src="img/j2.PNG" width="100%" height=" 200 ">
+                    </div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p52');">أسبوع تعريفي</a></td>
+
+                                <td>ceptembre,2019</td>
+                                <td>17</td>
+                                <td> at 10 AM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p52" style="display:none ">Details:<br> بسم الله الرحمن الرحيم وصلاة الله وسلامه على محمد خاتم الأنبياء والمرسلين. أما بعد فيتشرف نادي إقرأ للقرآن الكريم بقص شريط بداية أنشطته الموسمية أمام الطلبة بكلية العلوم والتقنيات بطنجة من خلال أسبوع تواصلي تفاعلي تعريفي.
+                        اسبوع نخرج فيه إليكم لنقترب منكم، ونفتح فيه قنوات التواصل معكم،كي نسمع صوتكم و نستقبل آراءكم واقتراحاتكم ونقدكم، ونجيب عن استفياراتكم واسئلتكم. ونقرب لكم فيه الصورة عن أنشطتنا وأهدافنا ومبادئنا، ونفتح فيه أبواب الترشح للإنضمام
+                        للنادي أمام الطلبة الراغبين في الانضمام إلينا. فمرحبا بكم إخواننا الطلبة فنحن متواجدين بالساحة الحمراء وكذلك متنقلين داخل فضاءات الكلية
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+
+                </div>
+                <!-------------------activite3 du club5-------------------------------------------------->
+                <div id="club53" style="display:none">
+                    <h3>
+
+                        ACTIVITES DU CLUB :نادي اقرأ للقرآن الكريم
+                    </h3>
+                    <div class="fakeimg "> <img src="img/j3.PNG " width="100%" height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p53');">محاضرة " إِنَّهُمْ فِتْيَةٌ آمَنُوا بِرَبِّهِمْ "</a></td>
+
+                                <td>mai,2019</td>
+                                <td>27</td>
+                                <td>1:30 PM – 3:30 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p53" style="display:none ">Details:<br> بسم الله الرحمن الرحيم . صحيح أن الْفِتَن صارت تَعْصِفُ بِنَا مَنْ كَلِّ حَدَبٍ وَصَوْبٍ. و َأَمْوَاجُهَا أضحت كَأَنَّهَا الْجِبَالُ تَتَقَاذَف ُ مَرَاكِبَنَا وَنِيَرَانُ الشَّهْوَاتِ تَرْمِي بِشَرَرٍ مِنْ حَوْلِنَا كَالْْقَصْرِ
+                        طَائِشَةٌ وَحِبَالُ المعاصي تُكَتِّفُنَا وَكَأَنَّهَا مِنْ مسد، والنتيجة ظُلْمَةٌ فِي الْقَلْبِ أَحْدَثَتْهَا الذُّنُوبُ قَادَتْ بِنَا إِلَى حَوَالِك الظُّلْمَاتِ وَفَرَاغ فِي الرَّوْحِ أَحْدَثَهُ الْبُعْدُ عَنِ اللهِ حَتَّى اضطربت
+                        فينا الْمَشَاعِرَ وَاِخْتَنَقَتِ الْحَنَايَا.ولَكِن هُنَاكَ شَوْقٌ دَائِمًا يَعْتَرِي نُفُوسَنَا لِلتَّوْبَةِ شَوْقٌ لِتدْمَعَ الْعَيْنُ وَيَخْشَعَ الْقَلْبُ لِلرجوع إلى اللهِ، تَوْبة هِي لَنَا سَلْوًى لِلْفُؤَادِ وَمُهَجَة لِلرّوحِ
+                        . أَفَمَا آن الْأوَانُ بَعد يانفس أَفَمَا حَانَ الْحينُ بَعْد أَْنْ تَتُوبِي . أَمَا حَنَّ الْوِجْدَانُ لِمُعَانِقَةِ التَّوْبَةِ وَمُصَافَحَةِ الْهُدَى و الإستقامة حتى نكون فَتِية قَدِ اِسْتَقَامُوا واهْتَدَوْا فَنَكُون فَتِية
+                        آمنوا بِرَبِّهِمْ حق الإيمان.نعم وسط أمواج الفتن العاتية وفي بحرها اللجي وظلماته يوجد فتية متمسكون جدا بدينهم حقا إِنَّهُمْ فِتْيَةٌ آمَنُوا بِرَبِّهِمْ . " إِنَّهُمْ فَتِّيَّةٌ ءامنوا بِرَبِّهِمْ " هَذَا هُوَ عُنْوَانُ مُحَاضَرَتِنَا
+                        الْخِتَامِيَّةِ لِهَذِهِ السَّنَةِ إِنْ شَاءَ اللهُ ، عُنْوَان نُرِيدُهُ أَْنْ يَكُونَ عُنْوَانا لَنَا فِي هَذِهِ الْحَيَاةِ فَلَا نَضِلُّ ولانشقى ولاتزل أَقُدَامُنَا ولاتهوى. فَمَرْحَبا بِكُمْ فِي هَذِهِ الْمُحَاضَرَةِ الَّتِي
+                        سَيَتَفَضَّلُ عَلَيْنَا بإِلْقَائِهَا الشَّيْخَ الْعَلْمِي الشطاط حَفِظَهُ اللهُ مَعَ تِلَاوَةٍ مِنَ الذِّكْرِ الْحَكِيمِ بِصَوْتِ الْقَارِئِ عَبْدُ الْعَالِي، مَوْعِدُنَا يوم الإثنين 27 مَاي إن شاء الله عَلَى السَّاعَةِ 13:30
+                        بِقَاعَة الْمَكْتَبَةِ بِكُلِّيَّةِ الْعُلُومِ وَالتِّقْنِيَّاتِ بِطَنْجَة فكونوا في الموعد .
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!---------------------------activite4 du club5------------------------------------------->
+                <div id="club54" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB :نادي اقرأ للقرآن الكريم
+
+                    </h3>
+                    <div class="fakeimg "> <img src="img/j4.PNG " width="100%" height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p54');"> محاضرة بعنوان : الشباب والاعتزاز بالهوية</a></td>
+
+                                <td>avril,2019</td>
+                                <td>19</td>
+                                <td> 3 PM – 5:15 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p54" style="display: none ">Details:<br>يُرَحّب بكمْ نادي اقرَأ للقُرْآنِ الكريم مَرّةً أخْرَى فِي مَجْلِس مِنْ مَجَالسِ الذّكرِ وَالغفرَان..مَجْلس آخَرَ مِنْ مَجَالس العلم وَالافادَة...فيَا هَلا وَيَا مَرحبًا فِي مُحَاضَرَة جَديدَة بعنوان الشباب...والاعتزاز
+                        بالهوية من إلقاء الأستاذَ أبَو أوَيس الإدريسي تتقدمها وتليها تلاوة عطرة من الذكر الحكيم للقارئين صاحبا الصوت الندي: محمد القصير وحمز الشرادي... فمرحبا بكم مرة أخرى ; يسرنا حضوركم فكونوا في الموعد يَوْمَ الْجُمُعَةِ الْمُقْبِلَةِ
+                        إِنْ شَاءَ اللهُ عَلَى السَّاعَةِ 15:00 المُدرج الخامس بِكُلِّيَّةِ العُلُومِ وَالتَّقْنِيَاتِ طنجة. لَا تَنْسَوْا دَعْوَةَ أَصْدِقَائِكُمْ وَأَحْبَابِكُمْ وَشَارِكُوا الخَيْرَ مَعَ مَنْ تُحِبُّونَ, قَالَ صَلَّى اللهُ عَلَيْهِ
+                        وَسَلَّمَ (مَنْ دَلَّ عَلَى خَيْرٍ, فَلَهُ أَجْر فَأَعِله), رَوْاهُ مُسْلِم
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+                <!---------------------activite5 du club5------------------------------------------------------>
+                <div id="club55" style="display:none">
+                    <h3>
+                        ACTIVITES DU CLUB :نادي اقرأ للقرآن الكريم
+
+                    </h3>
+                    <div class="fakeimg "> <img src="img/j5.PNG " width="100%" height="200 "></div>
+
+
+                    <table class="table table-striped ">
+                        <caption>PLANING</caption>
+
+                        <thead>
+                            <tr>
+                                <th>Nom de l'activité</th>
+                                <th>Mois,Année</th>
+                                <th>Jour</th>
+                                <th>Heure</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a style="font-family: serif; font-weight: 900; color: rgb(32, 13, 85);font: medium;" href="javascript:visibilite('p55');">	
+                                                دورة ثقافية في حفظ الأحاديث النبوية</a>
+                                </td>
+
+                                <td>decembre,2019</td>
+                                <td>1</td>
+                                <td>4 PM – 6 PM</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="paragraph" id="p55" style="display: none ">Details:<br>بسم الله الرحمن الرحيم لما كانت هاته الأربعين حديثا ينبني عليها الدين و تدور عليها احكام الشريعة ويحتاج إليها المسلم في حياته , فقام إخوانكم بنـادي (اقرأ للقرآن الكريـم) بتنظيم دورَةً ثقافية مهمة وسهلة في حِفظِ الأحاديث
+                        النبوية.... على الراغبين في المشاركة إرسال كلمة (مشارك) عبر الواتساب إلى الرقم: (0603082325) أو الانخراط مباشرة عبر الرابط : <br>
+                        <a href="https://chat.whatsapp.com/FJq4lLTMCL3I5PTaJwXaII">https://chat.whatsapp.com/FJq4lLTMCL3I5PTaJwXaII</a>
+                        <br>
+                        <hr class="light"> <br>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <footer style="background-color: rgb(143, 190, 231) ;color: rgb(32, 13, 85);">
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4" style="text-align: justify;">
+
+                    <h2>LIENS UTILES</h2>
+                    <hr class="light">
+                    <div>
+                        <p><a href="http://www.uae.ma/website/" style="color:rgb(32, 13, 85);">-Site de l'Université</a></p>
+                        <p><a href="https://www.jamiati.ma/fr" style="color:rgb(32, 13, 85);">-Portail des universités marocaines</a></p>
+                        <p style="color:rgb(32, 13, 85);">-Le Conseil Supérieur de l’Enseignement</p>
+                        <p><a href="https://antiplagiat.imist.ma/index.php/fr/" style="color:rgb(32, 13, 85);">-CNRST</a></p>
+                        <p><a href="http://www.maroc.ma" style="color:rgb(32, 13, 85);">-Portail National du Maroc</a></p>
+                    </div>
+
+                    <hr class="light">
+                </div>
+                <div class="col-md-4" style="text-align: justify;">
+                    <h2>CONTACTEZ NOUS:</h2>
+                    <hr class="light">
+                    <p>-Ancienne Route de l’Aéroport, Km 10, Ziaten. BP : 416. Tanger - Maroc</p>
+                    <p>-Numéro de téléphone: + 212 (0) 5 39 39 39 54 / 55</p>
+                    <p>-administration@fstt.ac.ma </p>
+                    <hr class="light">
+                </div>
+
+                <div class="col-md-4 ">
+                    <h2>RETROUVEZ NOUS SUR</h2>
+                    <hr class="light ">
+                    <p>Nous sommes sur les réseaux sociaux. Suivez-nous.</p>
+                    <a href="https://www.facebook.com/fstt.ac.ma" class="fa fa-facebook "></a>
+                    <a href="https://twitter.com/FsttOfficielle" class="fa fa-twitter "></a>
+                    <a href="https://plus.google.com/107290281971577328998" class="fa fa-google "></a>
+                    <hr class="light ">
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+
+</body>
